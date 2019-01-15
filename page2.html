@@ -5,6 +5,7 @@
     <title>Page2</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     
   </head>
   <body>
@@ -21,11 +22,11 @@
               
             </div>
           </div>
-          <div class="card" id="bluejaygiphy">
-            <iframe src="https://giphy.com/embed/JLzpbdDNjKxj2" width="480" height="474" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/sobre-rama-movindose-JLzpbdDNjKxj2">via GIPHY</a></p>
+          <div class="card" id="bluejay-giphy">
+            <img src="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy_s.gif" data-still="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy_s.gif" data-animate="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy.gif" data-state="still" class="bluejaygiphy">
             <div class="card-body">
               <h5 class="card-title">Giphy</h5>
-              <p class="card-text">Watch me move!</p>
+              <p class="card-text">Click me to watch me move!</p>
               <p class="card-text"><small class="text-muted"></small></p>
             </div>
           </div>
@@ -38,3 +39,25 @@
             </div>
           </div>
         </div>
+
+
+        <script src="assets/javascript/app.js"></script> 
+        
+<script type="text/javascript">
+  $(".bluejaygiphy").on("click", function() {
+    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
+    var state = $(".bluejaygiphy").attr("data-state");
+    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
+    // Then, set the image's data-state to animate
+    // Else set src to the data-still value
+    if (state === "still") {
+      $(".bluejaygiphy").attr("src", $(".bluejaygiphy").attr("data-animate"));
+      $(".bluejaygiphy").attr("data-state", "animate");
+    } else {
+      $(".bluejaygiphy").attr("src", $(".bluejaygiphy").attr("data-still"));
+      $(".bluejaygiphy").attr("data-state", "still");
+    }
+  });
+</script>
+
+        </body>
