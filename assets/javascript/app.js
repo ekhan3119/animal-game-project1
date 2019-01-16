@@ -12,6 +12,16 @@ $(".gif").on("click", function() {
       $(".gif").attr("data-state", "still");
     }
   });
+
 })
+//var rooster = $("rooster-soundclip");
+
+var audioElement = document.createElement("audio");
 
 
+$(".sound").on("click", function() {
+  audioElement.src= $(this).attr("data-sounds");
+
+  audioElement.play();
+  console.log("I am working");
+});
