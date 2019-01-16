@@ -5,12 +5,8 @@
     <title>page2</title>
 
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    
-
-   <link rel="stylesheet" typr="text" href="assets/css/style.css">
-
+    <link rel="stylesheet" typr="text" href="assets/css/style.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   </head>
   <body>
@@ -21,59 +17,34 @@
             <div class="card-body">
               <h5 class="card-title">Click me to hear me sing!</h5>
               <p class="card-text"></p>
-              <p class="card-text"><small class="text-muted"></small></p>
-
               
             </div>
           </div>
+
           <div class="card" id="bluejay-giphy">
-            <img src="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy_s.gif" data-still="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy_s.gif" data-animate="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy.gif" data-state="still" class="bluejaygiphy">
+            <img src="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy_s.gif" 
+            data-still="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy_s.gif" 
+            data-animate="https://media.giphy.com/media/JLzpbdDNjKxj2/giphy.gif" data-state="still" class="bluejaygiphy">
             <div class="card-body">
-              <h5 class="card-title">Giphy</h5>
-
-              <p class="card-text">Click me to watch me move!</p>
-              <p class="card-text"><small class="text-muted"></small></p>
-
-              <p class="card-text">Watch me move!</p>
+            <h5 class="card-title">Giphy</h5>
+            <p class="card-text">Click me to watch me move!</p>
+            <p class="card-text">Watch me move!</p>
 
             </div>
           </div>
+
           <div class="card" id="bluejayfeeding">
-            <img src="assets/images/blue-jays-eating-seeds.jpg" class="card-img-top" alt="...">
+            <img src="assets/images/blue-jays-eating-seeds.jpg" class="card-img-top" alt="bluejay-food">
             <div class="card-body">
               <h5 class="card-title">Feeding Habits</h5>
               <p class="card-text">Click on the image to learn more!</p>
-              <p class="card-text"><small class="text-muted"></small></p>
+              <i class="fas fa-igloo"></i>
             </div>
           </div>
         </div>
-
-
-
-        <script src="assets/javascript/app.js"></script> 
-        
-<script type="text/javascript">
-  $(".bluejaygiphy").on("click", function() {
-    // The attr jQuery method allows us to get or set the value of any attribute on our HTML element
-    var state = $(".bluejaygiphy").attr("data-state");
-    // If the clicked image's state is still, update its src attribute to what its data-animate value is.
-    // Then, set the image's data-state to animate
-    // Else set src to the data-still value
-    if (state === "still") {
-      $(".bluejaygiphy").attr("src", $(".bluejaygiphy").attr("data-animate"));
-      $(".bluejaygiphy").attr("data-state", "animate");
-    } else {
-      $(".bluejaygiphy").attr("src", $(".bluejaygiphy").attr("data-still"));
-      $(".bluejaygiphy").attr("data-state", "still");
-    }
-  });
-</script>
-
-        </body>
-
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="assets/javascripts/app.js"></script>     
+        <i class="fas fa-igloo"></i>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+        <script src="assets/javascript/app.js"></script>     
 </body>
 </html>
 
