@@ -27,9 +27,9 @@ $(".sound").on("click", function () {
 
   
 
-$("#done").on("click", function showGif() {
+$("#done").on("click", function() {
 
-  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=12X5g58jj9Myz9YLGYD6c8T5IIr7Qc2V&tag=congratulations&rating=g&limit=1";
+  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=12X5g58jj9Myz9YLGYD6c8T5IIr7Qc2V&tag=congratulations&rating=g";
   console.log(queryURL);
   $("congrats-gif").empty();
   $.ajax({
@@ -55,11 +55,9 @@ $("#done").on("click", function showGif() {
      
     });
 
-
-
-// Initialize tooltip component
-
   });
+  
+// Initialize tooltip component
 
   $(function () {
     $('[data-toggle="tooltip"]').tooltip()
