@@ -46,14 +46,14 @@ $("#done").on("click", function() {
     // Saving the image_original_url property
       var imageUrl = response.data.image_original_url;
 
-      // Creating and storing an image tag
+    // Creating and storing an image tag
       var congratulation = $("<img>");
 
-      // Setting the catImage src attribute to imageUrl
+    // Setting the catImage src attribute to imageUrl
       congratulation.attr("src", imageUrl);
       congratulation.attr("alt", "congrats");
 
-      // Prepending the catImage to the images div
+    // Prepending the catImage to the images div
       $(".congrats-gif").prepend(congratulation);
     });
 
