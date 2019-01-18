@@ -57,6 +57,7 @@ $("#done").on("click", function() {
       $(".congrats-gif").prepend(congratulation);
     });
 
+  });
   var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'left-right',
