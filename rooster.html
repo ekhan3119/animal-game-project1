@@ -3,13 +3,14 @@
   <head>
     <meta charset="UTF-8">
     <title>rooster-details-page</title>
-
+    <!--bootstrap-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <!--css-->
     <link rel="stylesheet" typr="text" href="assets/css/style.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.3/css/all.css" integrity="sha384-UHRtZLI+pbxtHCWp1t77Bi1L4ZtiqrqD80Kn4Z8NTSRyMA2Fd33n5dQ8lWUE00s/" crossorigin="anonymous">
 
   </head>
   <body>
+    <!--this is the div for all the cards that holds animal details-->
       <span class="border"></span>
       <div class="card-deck">
           <div class="card sound" id="rooster-soundclip" data-sounds="assets/audioclips/Rooster-SoundBible.com-1114473528.wav">
@@ -20,7 +21,7 @@
               
             </div>
           </div>
-
+          <!--this is the gif card div-->
           <div class="card" id="rooster-giphy">
             <img src="https://media.giphy.com/media/l3vR9IEU6nYAmZyoM/giphy_s.gif" 
             data-still="https://media.giphy.com/media/l3vR9IEU6nYAmZyoM/giphy_s.gif" 
@@ -28,22 +29,41 @@
             <div class="card-body">
             <h5 class="card-title">Giphy</h5>
             <p class="card-text">Click me to watch me move!</p>
-            <p class="card-text">Watch me move!</p>
 
             </div>
           </div>
-
+          <!--This is the feeding div-->
           <div class="card" id="rooster-food">
-            <img src="assets/images/blue-jays-eating-seeds.jpg" class="card-img-top" alt="rooster-food">
+            <img src="assets/images/roosterfeeding.jpg" class="card-img-top" alt="rooster-food">
             <div class="card-body">
               <h5 class="card-title">Feeding Habits</h5>
-              <p class="card-text">Click on the image to learn more!</p>
-              <i class="fas fa-igloo"></i>
+              <!--popper tooltip added-->
+              <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="carrots,lettuce,corn and oatmeal!">
+                  I like to eat...
+                </button>
             </div>
           </div>
         </div>
-        <i class="fas fa-igloo"></i>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-        <script src="assets/javascript/app.js"></script>     
-</body>
+        <div>
+          <!--gif button and div-->
+            <button class="button" id="done" type="button">Done</button>
+            <div class="congrats-gif"></div>
+          </div>
+          <br></br>
+          <!--Back button div to go back to homepage-->
+          <div class="back-btn">
+              <a href="index.html"><button class="back-button" id="back" type="button">Back</button></a>
+    
+          </div>
+
+<!--jQuery library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<!-- Popper -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+
+<!-- Latest compiled and minified Bootstrap JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<!--loacal javascript-->
+<script src="assets/javascript/app.js"></script>
 </html>
