@@ -55,7 +55,7 @@ $("#done").on("click", function showGif() {
      
     });
 
-
+    <!-- Initialize Bootstrap functionality -->
 
 // Initialize tooltip component
 
@@ -65,9 +65,9 @@ $("#done").on("click", function showGif() {
     $('[data-toggle="tooltip"]').tooltip()
   })
   
-// Initialize popover component
+  // Initialize popover component
   $(function () {
     $('[data-toggle="popover"]').popover()
   });
 
-
+  

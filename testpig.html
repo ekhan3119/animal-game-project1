@@ -23,26 +23,26 @@
             </div>
           </div>
 
-      <div class="card" id="pig-giphy">
+          <div class="card" id="pig-giphy">
             <img src="https://media.giphy.com/media/d7u3Q9cg0KneM/giphy_s.gif" 
             data-still="https://media.giphy.com/media/d7u3Q9cg0KneM/giphy_s.gif" 
             data-animate="https://media.giphy.com/media/d7u3Q9cg0KneM/giphy.gif" data-state="still" class="gif">
             <div class="card-body">
             <h5 class="card-title">Giphy</h5>
             <p class="card-text">Click me to watch me move!</p>
-            
+            <p class="card-text">Watch me move!</p>
 
             </div>
           </div>
 
-        <div class="card" id="pigfeeding">
+          <div class="card" id="pigfeeding">
             <img src="assets/images/pigeating.jpg" class="card-img-top" alt="bluejay-food">
             <div class="card-body">
               <h5 class="card-title">Feeding Habits</h5>
               <i class="fas fa-igloo"></i>
 
-          <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="leaves, fruits, roots, flowers, insects, and mice!">
-                I like to eat...
+              <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Now hover out.">
+                Hover over me
          </button>
             </div>
           
@@ -52,8 +52,26 @@
         </div>
 
 
-        
+            <script>
+              // Initialize tooltip component
+              $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+              })
+              
+              // Initialize popover component
+              $(function () {
+                $('[data-toggle="popover"]').popover()
+              })
+              </script>
+       
+        <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+       
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        -->
 
+        <button type="button" class="btn btn-primary" data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Now hover out.">
+       Hover over me
+</button>
 
 </div>
 
@@ -66,7 +84,7 @@
 
 <!-- Latest compiled and minified Bootstrap JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<script src="assets/javascript/app.js"></script>
+<script src="assets/javascript/test.js"></script>
 </body>
 		
 </html>
