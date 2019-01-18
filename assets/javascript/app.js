@@ -1,3 +1,6 @@
+
+
+
 $(document).ready(function () {
   $(".gif").on("click", function () {
 
@@ -29,7 +32,7 @@ $(".sound").on("click", function () {
 
 $("#done").on("click", function showGif() {
 
-  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=12X5g58jj9Myz9YLGYD6c8T5IIr7Qc2V&tag=congratulations&rating=g&limit=1";
+  var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=12X5g58jj9Myz9YLGYD6c8T5IIr7Qc2V&tag=congratulations&rating=g";
   console.log(queryURL);
   $("congrats-gif").empty();
   $.ajax({
@@ -52,6 +55,23 @@ $("#done").on("click", function showGif() {
 
       // Prepending the catImage to the images div
       $(".congrats-gif").prepend(congratulation);
-     
     });
+   
+    
 }); 
+
+
+var granimInstance = new Granim({
+  element: '#canvas-basic',
+  direction: 'left-right',
+  isPausedWhenNotInView: true,
+  states : {
+      "default-state": {
+          gradients: [
+              ['#ff9966', '#ff5e62'],
+              ['#00F260', '#0575E6'],
+              ['#e1eec3', '#f05053']
+          ]
+      }
+  }
+});
