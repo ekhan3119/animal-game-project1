@@ -7,10 +7,11 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <!--css-->
     <link rel="stylesheet" typr="text" href="assets/css/style.css">
-
+    <script src="assets/src/granim.min.js"></script>
   </head>
   <body>
     <!--this is the div for all the cards that holds animal details-->
+    <div><canvas id="canvas-basic"></canvas></div>   
     <div class="main">
       <span class="border"></span>
       <div class="card-deck">
@@ -42,16 +43,16 @@
               </div>
           </div>
       </div>
-      
-      <div>
-        <!--gif button and div-->
-        <button class="button" id="done" type="button">Done</button>
-        <div class="congrats-gif"></div>
-      </div>
-      <br></br>
-      <!--Back button div to go back to homepage-->
-      <div class="back-btn">
-        <a href="index.html"><button class="back-button" id="back" type="button">Back</button></a>
+
+      <div class="card mb-3 center" style="width: 18rem;">
+          <div class="card-body center">
+            <button class="button" id="done" type="button">Done</button>
+          <div class="congrats-gif" width="300" height="300"></div>
+          <br></br>
+          <div class="back-btn">
+            <a href="index.html"><button class="back-button" id="back" type="button">Back</button></a>
+          </div> 
+          </div>
       </div>
     </div>
 <!--jQuery library -->

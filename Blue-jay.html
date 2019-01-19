@@ -5,10 +5,11 @@
     <title>Blue Jay</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" typr="text" href="assets/css/style.css">
-
+    <script src="assets/src/granim.min.js"></script>
   </head>
   
   <body>
+      <div><canvas id="canvas-basic"></canvas></div>   
       <span class="border"></span>
         <div class="card-deck">
           <div class="card sound" id="bluejay-soundclip"  data-sounds="assets/audioclips/bluejay_call-Mike_Koenig-591302150.mp3"> 
@@ -39,13 +40,15 @@
           </div> 
         </div>
 
-      <div>
-        <button class="button" id="done" type="button">Done</button>
-          <div class="congrats-gif"></div>
-      </div>
-      <br></br>
-      <div class="back-btn">
-        <a href="index.html"><button class="back-button" id="back" type="button">Back</button></a>
+      <div class="card mb-3 center" style="width: 18rem;">
+          <div class="card-body center">
+            <button class="button" id="done" type="button">Done</button>
+          <div class="congrats-gif" width="300" height="300"></div>
+          <br></br>
+          <div class="back-btn">
+            <a href="index.html"><button class="back-button" id="back" type="button">Back</button></a>
+          </div> 
+          </div>
       </div>
 
 <!--jQuery library -->
