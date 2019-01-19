@@ -1,35 +1,27 @@
-
-
-
+// initializing the giphy image on click 
 $(document).ready(function () {
   $(".gif").on("click", function () {
-
     var state = $(".gif").attr("data-state");
-
-    if (state === "still") {
-      $(".gif").attr("src", $(".gif").attr("data-animate"));
-      $(".gif").attr("data-state", "animate");
-    } else {
-      $(".gif").attr("src", $(".gif").attr("data-still"));
-      $(".gif").attr("data-state", "still");
-    }
+      if (state === "still") {
+        $(".gif").attr("src", $(".gif").attr("data-animate"));
+        $(".gif").attr("data-state", "animate");
+      } else {
+        $(".gif").attr("src", $(".gif").attr("data-still"));
+        $(".gif").attr("data-state", "still");
+      }
   });
-
 })
-//var rooster = $("rooster-soundclip");
 
+// initializing audio on click  
 var audioElement = document.createElement("audio");
-
 
 $(".sound").on("click", function () {
   audioElement.src = $(this).attr("data-sounds");
-
   audioElement.play();
-  console.log("I am working");
+  //console.log("I am working");
 });
-
   
-
+//  api for giphy 
 $("#done").on("click", function() {
 
   var queryURL = "https://api.giphy.com/v1/gifs/random?api_key=12X5g58jj9Myz9YLGYD6c8T5IIr7Qc2V&tag=congratulations&rating=g";
@@ -49,15 +41,28 @@ $("#done").on("click", function() {
     // Creating and storing an image tag
       var congratulation = $("<img>");
 
-    // Setting the catImage src attribute to imageUrl
+    // Setting the congratulation src attribute to imageUrl
       congratulation.attr("src", imageUrl);
       congratulation.attr("alt", "congrats");
 
-    // Prepending the catImage to the images div
+    // Prepending the congratulation to the images div
       $(".congrats-gif").prepend(congratulation);
     });
 
   });
+  
+// Initialize tooltip component
+
+  $(function () {
+    $('[data-toggle="tooltip"]').tooltip()
+  })
+  
+// Initialize popover component
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  });
+
+// for index page backgound using granim.js
   var granimInstance = new Granim({
     element: '#canvas-basic',
     direction: 'left-right',
@@ -72,15 +77,3 @@ $("#done").on("click", function() {
         }
     }
 });
-
-  
-// Initialize tooltip component
-
-  $(function () {
-    $('[data-toggle="tooltip"]').tooltip()
-  })
-  
-// Initialize popover component
-  $(function () {
-    $('[data-toggle="popover"]').popover()
-  });
